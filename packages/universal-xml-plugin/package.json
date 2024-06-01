@@ -1,0 +1,61 @@
+{
+  "name": "@appium/universal-xml-plugin",
+  "version": "1.0.19",
+  "description": "Appium plugin for making XML source and XPath queries the same across iOS and Android",
+  "keywords": [
+    "automation",
+    "javascript",
+    "selenium",
+    "webdriver",
+    "ios",
+    "android",
+    "firefoxos",
+    "testing"
+  ],
+  "homepage": "https://appium.io",
+  "bugs": {
+    "url": "https://github.com/appium/appium/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appium/appium-plugins.git"
+  },
+  "license": "Apache-2.0",
+  "author": "https://github.com/appium",
+  "types": "./build/lib/plugin.d.ts",
+  "files": [
+    "index.js",
+    "build",
+    "lib",
+    "tsconfig.json",
+    "!build/tsconfig.tsbuildinfo"
+  ],
+  "scripts": {
+    "test": "npm run test:unit",
+    "test:smoke": "node -e 'require(\"./index.js\")'",
+    "test:unit": "mocha \"./test/unit/**/*.spec.js\""
+  },
+  "dependencies": {
+    "@types/xmldom": "0.1.34",
+    "@xmldom/xmldom": "0.8.10",
+    "fast-xml-parser": "4.4.0",
+    "lodash": "4.17.21",
+    "source-map-support": "0.5.21",
+    "xpath": "0.0.34"
+  },
+  "peerDependencies": {
+    "appium": "^2.0.0-beta.35"
+  },
+  "engines": {
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0",
+    "npm": ">=8"
+  },
+  "appium": {
+    "pluginName": "universal-xml",
+    "mainClass": "UniversalXMLPlugin"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "8480a85ce2fa466360e0fb1a7f66628331907f02"
+}
